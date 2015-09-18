@@ -14,7 +14,7 @@ A sananmuunnos ("word transformation") is a Finnish wordplay similar to spooneri
 AS with all language-related things, there is not a completely systematic logic behind sananmuunnoses. However, there are a small number of rules to which most sananmuunnoses conform. This program attempts to solve sananmuunnoses by relying on these rules. It also attempts to make the newly-created words to comply with Finnish vowel harmony.
 ## Requirements
 Sananmuunnos requires python 3.x to run. Python 2.7 works to some extent but there may be encoding-related issues; these might be fixed later.
-## Copyright
-Copyright 2015 Tuukka Ojala <tuukka.ojala@gmail.com>
+## Author
+Tuukka Ojala <tuukka.ojala@gmail.com>
 ## License
 Sananmuunnos is distributed under the MIT license. See the file LICENSE for more information.
