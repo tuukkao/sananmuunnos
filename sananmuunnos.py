@@ -6,7 +6,6 @@ Sananmuunnos: Transforming Finnish spoonerisms made easy (and systematic).
 """
 
 __author__ = "Tuukka Ojala"
-__copyright__ = "Copyright 2015 Tuukka Ojala"
 __email__ = "tuukka.ojala@gmail.com"
 __version__ = "2015.0918"
 __license__ = "MIT"
