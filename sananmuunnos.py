@@ -91,8 +91,10 @@ def _test(transformation, word1, word2):
 def transform(words):
     """Make a sananmuunnos ("word transformation") out of the given words.
     
-    This function returns either teh created sananmuunnos or None if the transformation failed."""
+    This function returns either the created sananmuunnos or None
+    if the transformation failed."""
     transformed = None
+    words = words.lower()
     try:
         word1, word2 = words.split(" ")
     except ValueError:
