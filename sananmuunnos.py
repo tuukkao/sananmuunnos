@@ -98,6 +98,8 @@ def transform(words):
     words_list = []
     try:
         words_list = words.split(" ")
+        if len(words_list) < 2:
+            return None
         word1 = words_list[0]
         word2 = words_list[-1]
     except ValueError:
