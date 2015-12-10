@@ -95,8 +95,11 @@ def transform(words):
     if the transformation failed."""
     transformed = None
     words = words.lower()
+    words_list = []
     try:
-        word1, word2 = words.split(" ")
+        words_list = words.split(" ")
+        word1 = words_list[0]
+        word2 = words_list[-1]
     except ValueError:
         return None
     for transformation in _transformations:
@@ -106,7 +109,7 @@ def transform(words):
     word1, word2 = transformed
     word1 = _vowel_harmony(word1)
     word2 = _vowel_harmony(word2)
-    return " ".join((word1, word2))
+    return " ".join((word1, " ".join(words_list[1:-1]), word2))
 
 #List of transformations used by the "transform" function.
 _transformations = [_is_double_vowel, _is_initial_vowel, _is_initial_consonant]
@@ -114,7 +117,7 @@ _transformations = [_is_double_vowel, _is_initial_vowel, _is_initial_consonant]
 if __name__ == "__main__":
     import sys
     
-    if len(sys.argv) is not 3:
-        print("Usage: {} word1 word2".format(sys.argv[0]))
+    if len(sys.argv) < 3:
+        print("Usage: {} word1 word2 [...]".format(sys.argv[0]))
     else:
         print(transform(" ".join(sys.argv[1:])))
